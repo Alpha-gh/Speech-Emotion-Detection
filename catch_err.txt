@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "C:\Users\kunwa\Desktop\speech emotion detector\test.py", line 4, in <module>
+    EmotionDetectionModel()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\kunwa\Desktop\speech emotion detector\model.py", line 18, in __init__
+    self.processor = Wav2Vec2Processor.from_pretrained(model_name)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\kunwa\AppData\Roaming\Python\Python314\site-packages\transformers\processing_utils.py", line 1403, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, processor_dict, **kwargs)
+  File "C:\Users\kunwa\AppData\Roaming\Python\Python314\site-packages\transformers\processing_utils.py", line 1517, in _get_arguments_from_pretrained
+    tokenizer = cls._load_tokenizer_from_pretrained(
+        sub_processor_type, pretrained_model_name_or_path, subfolder=subfolder, **kwargs
+    )
+  File "C:\Users\kunwa\AppData\Roaming\Python\Python314\site-packages\transformers\processing_utils.py", line 1464, in _load_tokenizer_from_pretrained
+    tokenizer = auto_processor_class.from_pretrained(
+        pretrained_model_name_or_path, subfolder=subfolder, **kwargs
+    )
+  File "C:\Users\kunwa\AppData\Roaming\Python\Python314\site-packages\transformers\models\auto\tokenization_auto.py", line 773, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kunwa\AppData\Roaming\Python\Python314\site-packages\transformers\tokenization_utils_base.py", line 1721, in from_pretrained
+    return cls._from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~^
+        resolved_vocab_files,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kunwa\AppData\Roaming\Python\Python314\site-packages\transformers\tokenization_utils_base.py", line 1910, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\kunwa\AppData\Roaming\Python\Python314\site-packages\transformers\models\wav2vec2\tokenization_wav2vec2.py", line 154, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType

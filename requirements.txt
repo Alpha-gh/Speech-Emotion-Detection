@@ -1,0 +1,9 @@
+streamlit>=1.35.0
+torch
+torchaudio
+transformers
+librosa
+soundfile
+plotly
+pandas
+numpy
