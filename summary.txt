@@ -1,0 +1,7 @@
+Prepared dataset summary:
+angry: 192
+fearful: 192
+happy: 192
+neutral: 96
+sad: 192
+surprised: 192
